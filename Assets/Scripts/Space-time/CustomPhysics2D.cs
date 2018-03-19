@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script is the core of the custom physics in the game
+//It considers the custom TimeScale and make objects adapt accordingly
+
 public class CustomPhysics2D : MonoBehaviour {
 
     public Vector2 velocity = Vector2.zero;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//Class not used
+
 public class EnemyBehaviour : MonoBehaviour {
 
     public float rotationSpeed;

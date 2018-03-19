@@ -5,6 +5,9 @@ To whomever is playing this game, beware.
 HAHBCHBS (yeah, that's the game's abbreviation) is deliberatly unfinished, yet it strives to be as 
 functioning as possible.
 
+In this game You impersonate an hexadimensional boy, whose mother wants him to clean his bidimensional spaceship.
+That's why the player can control time, while moving.
+
 Now it comes the difficult part, where I have to convince you that this game is more
 than a stupid title and that it can convey new gameplay diversifiers for an after all static,
 nevertheless fun, structure as the one of Arkanoid.
@@ -30,5 +33,6 @@ Sergio Osimo
 
 
 PS:
-After I re-coded all the elastic collision logics in Unity from scratches, I just needed to have fun and to be somehow provocative.
+After I re-programmed all the elastic collision logics in Unity from scratches, I just needed to have 
+fun and to be somehow provocative.
 Hopefully, this game will make you laugh as well. (In that case, let me know)

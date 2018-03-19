@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NewTimeScaleManager : MonoBehaviour {
 
-    float _customDTime;
-    float _customFixedDTime;
+    float _customDTime; //not used
+    float _customFixedDTime; //not used
     float customTimeScale = 1;
 
     public float customDTime

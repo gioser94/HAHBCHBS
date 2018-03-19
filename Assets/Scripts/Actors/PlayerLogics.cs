@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Player basic movement
+
 public class PlayerLogics : MonoBehaviour {
 
     Collider2D coll;
@@ -24,10 +26,6 @@ public class PlayerLogics : MonoBehaviour {
 	}
 	
 
-	void Update () {
-		
-	}
-
     public void SetMoving(bool b, int dir)
     {
         if (!b)
@@ -42,6 +40,8 @@ public class PlayerLogics : MonoBehaviour {
 
     }
 
+
+
     public float ReturnAdjustmentAngle(float pointXPos, float bounceAngle)
     {
         //Debug.Log((transform.position.x - pointXPos) / coll.bounds.size.x);
@@ -50,6 +50,9 @@ public class PlayerLogics : MonoBehaviour {
         return angle;
     }
 
+
+    //returns an adjustment on the angle, given the point on the bar touched by the ball
+    //it basically tilts the normal of the bar by "angle" degrees
     public float AdjustedNormalAngle(float posX)
     {
 
@@ -62,7 +65,9 @@ public class PlayerLogics : MonoBehaviour {
     {
         transform.position = new Vector3(0f, transform.position.y, 0f);
     }
+    
 
+    //Not used, it would have drawn a ray that predicts the bounce of the ball (see BallLogics)
     public void DrawLineTowardsAngle(float angle, Vector2 applicationPoint)
     {
         if (angle == 0 && applicationPoint == Vector2.zero)
