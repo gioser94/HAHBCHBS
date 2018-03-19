@@ -1,0 +1,10 @@
+The game is played with a keyboard
+
+In the menu:
+ () Spacebar to go to the game
+ () ESC to exit the game
+
+In the game:
+ () Left/Right Arrows to move the bar
+ () Spacebar to start the match
+
