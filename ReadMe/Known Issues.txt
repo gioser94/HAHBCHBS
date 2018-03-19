@@ -1,0 +1,17 @@
+***KNOWN ISSUES***
+
+IT's NOT A BUG:
+	- The main character is an hexadimensional being. Therefore his ability to travel outside of his
+	  spaceship was made on purpose. Moreover, this feature facilitates the player in directioning the ball bounce.
+	  
+
+IT'S A BUG:
+	- Because of the OnTriggerEnter2D built-in function in Unity, the player may not recognize two colliders that
+	  are close one another. Therefore, the ball may "evade" from the spaceship. 
+	  At the current state of the build, there are rough escamotage to prevent the game to break, but they're not 100%
+	  working.
+	  The issue will not be completely fixed, as it will require to almost re-think the physics logics I implemented.
+
+	- Every time the player returns to the main menu, a new AudioSource is created and it overlays with the previous
+	  audiosource, which is marked as DontDestroyOnLoad(). 
+	  [FIXED]
