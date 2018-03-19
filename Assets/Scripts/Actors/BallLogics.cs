@@ -37,6 +37,8 @@ public class BallLogics : MonoBehaviour {
         }
 
     }
+    
+    //This is the function that basically calculate the bounce direction of the ball
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -47,7 +49,6 @@ public class BallLogics : MonoBehaviour {
             PlayerLogics.lives--;
             if (gameManager.CheckGameOver())
             {
-                //TODO LOAD GAME OVER SCREEN
                 Debug.Log("Game Over");
                 SceneManager.LoadScene(2);
             }
@@ -64,6 +65,7 @@ public class BallLogics : MonoBehaviour {
 
         if (collision.CompareTag("Player"))
         {
+	    //this detects with more precision the point of contact
             hit = Physics2D.Raycast(transform.position, Vector2.down);
             Debug.Log(hit.collider.name);
         }
@@ -76,14 +78,15 @@ public class BallLogics : MonoBehaviour {
         if (hit.normal == Vector2.up && collision.CompareTag("Player"))
         {
             
-            //Debug.Log(hit.point.x);
             normalAngle += collision.GetComponent<PlayerLogics>().AdjustedNormalAngle(hit.point.x);
 
         }
 
 
         float newSlope = BounceSlope(normalAngle);
-
+	
+	//The angle is clamped to avoid a too mild pendency odf the bounce on the player
+	
         if (hit.normal == Vector2.up && collision.CompareTag("Player"))
         {
             Debug.Log(CustomPhysics2D.ClampAngleZeroToPi(newSlope));
@@ -107,7 +110,6 @@ public class BallLogics : MonoBehaviour {
             collision.GetComponent<GameplayObject>().ChekcDeath();
             if (GameManager.CheckWin())
             {
-                //TODO LOAD WIN SCREEN
                 Debug.Log("You Win");
                 SceneManager.LoadScene(3);
             }
@@ -119,7 +121,8 @@ public class BallLogics : MonoBehaviour {
     {
         canRaycast = true;
     }
-
+    
+    //This is the formula that calculates the bounce slope
     public float BounceSlope(float normal)
     {
         float angularDistance = Mathf.PI + ballRB.GetDirection() - normal;
