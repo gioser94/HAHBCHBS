@@ -29,10 +29,3 @@ forms and shapes.
 
 Cheers,
 Sergio Osimo
-
-
-
-PS:
-After I re-programmed all the elastic collision logics in Unity from scratches, I just needed to have 
-fun and to be somehow provocative.
-Hopefully, this game will make you laugh as well. (In that case, let me know)
